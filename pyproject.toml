@@ -1,0 +1,7 @@
+[project]
+name = "waybar-stocks"
+version = "0.1.0"
+description = "Waybar module to show real-time stock market data."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["yfinance"]
