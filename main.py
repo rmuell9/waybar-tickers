@@ -1,8 +1,8 @@
 import yfinance as yf
+import sys
 
-def main():
-    print("Hello from waybar-stocks!")
+tickerSymbol = sys.argv[1]
+ticker = yf.Ticker(tickerSymbol)
 
-
-if __name__ == "__main__":
-    main()
+formattedPrice = tickerSymbol + ' $' + str(ticker.info['currentPrice'])
+print(formattedPrice)
