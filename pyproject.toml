@@ -1,5 +1,5 @@
 [project]
-name = "waybar-stocks"
+name = "waybar-tickers"
 version = "0.1.0"
 description = "Waybar module to show real-time stock market data."
 readme = "README.md"
