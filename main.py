@@ -6,9 +6,15 @@ tickerSymbol = sys.argv[1]
 ticker = yf.Ticker(tickerSymbol)
 lastClose = ticker.info['previousClose']
 current = ticker.info['currentPrice']
+marketState = ticker.info['marketState']
 change = current - lastClose
 
-price = tickerSymbol + ' $' + str(current)
+if marketState == "REGULAR":
+    mark = "✓ "
+else:
+    mark = "✗ "
+
+price = mark + tickerSymbol + ' $' + str(current)
 
 if change < 0:
     sign = '-'
