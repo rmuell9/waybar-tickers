@@ -3,10 +3,20 @@
 # Waybar Stock Ticker Module
 
 [python](http://python.org)
+[uv](https://github.com/astral-sh/uv)
 [yfinance](https://github.com/ranaroussi/yfinance)
 [waybar](https://github.com/Alexays/Waybar)
 </div>
 
+## Install
+```bash
+cd ~/.config/waybar
+git clone http://github.com/rmuell9/waybar-tickers
+cd waybar-tickers
+uv sync
+```
+
+## Config
 `~/.config/waybar/config.json`
 ```json
     "custom/stocks": {
