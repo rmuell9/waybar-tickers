@@ -14,7 +14,7 @@
         "restart-interval": 10
     }
 ```
-Example: putting module on left side of waybar, to right of workspace:
+Example: putting module on left side of waybar, to the right of the workspaces
 ```json
     "modules-left": [
         "hyprland/workspaces",
