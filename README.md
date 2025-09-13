@@ -8,9 +8,16 @@
 </div>
 
 `~/.config/waybar/config.json`
-```vim
+```json
     "custom/stocks": {
         "exec": "$HOME/.config/waybar/waybar-tickers/display.sh AAPL",
         "restart-interval": 10
     }
+```
+Example: putting module on left side of waybar, to right of workspace:
+```json
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/stocks"
+    ],
 ```
