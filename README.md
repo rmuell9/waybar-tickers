@@ -32,6 +32,7 @@ Example: putting module on left side of waybar, to the right of the workspaces
         "custom/stocks"
     ],
 ```
+Don't forget to integrate the module in `waybar/style.css`
 ## Extra
 Adding Multiple Tickers - just make another one!
 ```json
