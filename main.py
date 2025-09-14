@@ -8,6 +8,8 @@ lastClose = ticker.info['previousClose']
 current = ticker.info['currentPrice']
 marketState = ticker.info['marketState']
 change = current - lastClose
+percent = round((abs(change/lastClose) * 100), 2)
+
 
 if marketState == "REGULAR":
     mark = "✓ "
@@ -17,13 +19,18 @@ else:
 price = mark + tickerSymbol + ' $' + str(current)
 
 if change < 0:
-    sign = '-'
+    sign = ' -'
+    color = "#f44336"
 elif change > 0:
-    sign = '+'
+    sign = ' +'
+    color = "#4caf50"
 else:
     print(price)
+    sys.exit()
 
-priceChange = f' {sign}$' + str(round(abs(change), 2))
-output = price + priceChange
+priceChange = sign + "$" + str(round(abs(change), 2))
+percentChange = sign + str(percent) + "%"
+output = price + f'<span color="{color}">{percentChange + priceChange}</span>'
+
 
 print(output)
