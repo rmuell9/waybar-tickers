@@ -32,7 +32,7 @@ Example: putting module on left side of waybar, to the right of the workspaces
         "custom/stocks"
     ],
 ```
-
+## Extra
 Adding Multiple Tickers - just make another one!
 ```json
     "modules-left": [
