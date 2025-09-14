@@ -9,9 +9,10 @@
 </div>
 
 ## Install
+Make sure uv is installed for project management
 ```bash
 cd ~/.config/waybar
-git clone http://github.com/rmuell9/waybar-tickers
+git clone https://github.com/rmuell9/waybar-tickers
 cd waybar-tickers
 uv sync
 ```
@@ -30,4 +31,29 @@ Example: putting module on left side of waybar, to the right of the workspaces
         "hyprland/workspaces",
         "custom/stocks"
     ],
+```
+
+Adding Multiple Tickers - just make another one!
+```json
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/stocks",
+        "custom/stocks-GOOG"
+    ],
+
+    "custom/stocks-GOOG": {
+        "exec": "$HOME/.config/waybar/waybar-tickers/display.sh GOOG",
+        "restart-interval": 10
+    }
+```
+
+Extra Ideas - research shortcuts:
+```json
+    "custom/stocks-AAPL": {
+        "exec": "$HOME/.config/waybar/waybar-tickers/display.sh AAPL",
+        "restart-interval": 10,
+        "on-click": "xdg-open https://finance.yahoo.com/",
+        "on-click-right": "xdg-open https://www.sec.gov/search-filings",
+        "tooltip-format": "AAPL 10-Q Dates: 10/31/24, 1/30/25, 5/1/25, 7/31/25"
+    }
 ```
