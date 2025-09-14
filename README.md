@@ -18,7 +18,7 @@ uv sync
 ```
 
 ## Config
-`~/.config/waybar/config.json`
+`~/.config/waybar/config.jsonc`
 ```json
     "custom/stocks": {
         "exec": "$HOME/.config/waybar/waybar-tickers/display.sh AAPL",
