@@ -5,7 +5,7 @@ import sys
 tickerSymbol = sys.argv[1]
 ticker = yf.Ticker(tickerSymbol)
 lastClose = ticker.info['previousClose']
-current = ticker.info['currentPrice']
+current = round(ticker.info['currentPrice'], 2)
 marketState = ticker.info['marketState']
 change = current - lastClose
 percent = round((abs(change/lastClose) * 100), 2)
