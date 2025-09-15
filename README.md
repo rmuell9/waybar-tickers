@@ -1,5 +1,8 @@
 <div align="center">
 
+<img width="263" height="28" alt="image" src="https://github.com/user-attachments/assets/d6d2c237-3e79-4efb-9612-548f517f3554" />
+<img width="1917" height="37" alt="image" src="https://github.com/user-attachments/assets/f86f8808-fc97-474e-81d4-eb122abf3284" />
+
 # Waybar Stock Ticker Module
 
 [python](http://python.org)
