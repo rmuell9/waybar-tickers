@@ -26,7 +26,7 @@ elif change > 0:
     color = "#4caf50"
 else:
     print(price)
-    sys.exit()
+    sys.exit(0)
 
 priceChange = sign + "$" + str(round(abs(change), 2))
 percentChange = sign + str(percent) + "%"
